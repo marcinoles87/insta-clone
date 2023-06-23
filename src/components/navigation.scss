@@ -1,6 +1,7 @@
 .nav-container{
-    width: 100vw;
-    height: 20vh;
+    width: 80vw;
+    height: 10vh;
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -15,21 +16,19 @@
         }
     }
 
-    .search{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30vw;
-       
-
         .search-icon{
-            align-items: baseline;
-            transform: scale(0.3);
+            width: 30%;
+            transform: scale(0.1);
         }
+
+        span{
+            margin-right: 20px;
+        }
+
+    
 
         
         
 
     }
 
-}

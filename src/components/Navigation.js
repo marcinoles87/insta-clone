@@ -10,11 +10,11 @@ function Navigation() {
         <div className='nav-logo'>
             <img className='logo' src={logo} alt='instagram logo'></img>
         </div>
-        <div className='search'>
+        
             <img className='search-icon' src={search} alt='search icon'></img>
             <span>Search</span>
             <input placeholder='search...'></input>
-        </div>
+    
 
     </nav>
   )
