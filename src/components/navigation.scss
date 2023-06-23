@@ -16,15 +16,20 @@
     }
 
     .search{
-        width: 30vw;
         display: flex;
-        flex-direction: row;
-        justify-content: left;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+       
 
         .search-icon{
             align-items: baseline;
             transform: scale(0.3);
         }
+
+        
+        
+
     }
 
 }

@@ -13,7 +13,7 @@ function Navigation() {
         <div className='search'>
             <img className='search-icon' src={search} alt='search icon'></img>
             <span>Search</span>
-            <input placeholder='search'></input>
+            <input placeholder='search...'></input>
         </div>
 
     </nav>
