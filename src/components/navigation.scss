@@ -5,6 +5,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
+    align-items: center;
 
     .nav-logo{
         width: 20vw;
@@ -18,10 +19,11 @@
         width: 30vw;
         display: flex;
         flex-direction: row;
+        justify-content: left;
 
         .search-icon{
-            width: 30%;
-            height: 30%;
+            align-items: baseline;
+            transform: scale(0.3);
         }
     }
 
