@@ -1,10 +1,11 @@
 
 import './App.css';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <div className="App">
-      <div>Instagram Clone</div>
+      <Navigation></Navigation>
     </div>
   );
 }
