@@ -13,12 +13,11 @@ const baseURL = "https://randomuser.me/api/?results=10";
 
 useEffect( () => {
   axios.get(`${baseURL}`).then( (response) => {
-    setFriend(response.data);
-
+    setFriend(response.data.results);
    
   } )
 
-  console.log(friend)
+  console.log(friend[0])
   
 
 }, [])
