@@ -10,7 +10,7 @@ function Header({friend}) {
             return(
               <>
               <li key={key}> 
-              <img src={friend.picture.thumbnail} alt='friend'></img>
+              <img className='header-friend-photo' src={friend.picture.thumbnail} alt='friend'></img>
               <p>{friend.id.name}</p>
               <h2>{friend.location.country}</h2>
               </li>

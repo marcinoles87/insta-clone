@@ -16,7 +16,12 @@
         width: 100%;
         height: 10vh;
         overflow: hidden;
+
+        .header-friend-photo{
+            border-radius: 20px;
+        }
     }
+
 
     .header-main{
         background-color: purple;
