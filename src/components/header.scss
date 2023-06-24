@@ -9,9 +9,13 @@
 
 
     .header-friend-logo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         background-color: aquamarine;
         width: 100%;
         height: 10vh;
+        overflow: hidden;
     }
 
     .header-main{
