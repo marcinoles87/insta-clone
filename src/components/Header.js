@@ -17,7 +17,9 @@ function Header({friend}) {
             )
           })}
         </div>
-        <div className='header-main'>header-logo</div>
+        <div className='header-main'>
+          
+        </div>
         <div className='header-link-right'>header-link-right</div>
         
     
