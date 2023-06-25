@@ -9,7 +9,7 @@ function App() {
 
   const [friend , setFriend ] = useState([]);
 
-const baseURL = "https://randomuser.me/api/?results=10";
+const baseURL = "https://randomuser.me/api/?results=15";
 
 useEffect( () => {
   axios.get(`${baseURL}`).then( (response) => {
