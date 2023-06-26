@@ -1,4 +1,5 @@
 import React from 'react'
+import Main from './Main';
 import './header.scss'
 
 function Header({friend}) {
@@ -18,7 +19,7 @@ function Header({friend}) {
           })}
         </div>
         <div className='header-main'>
-          
+          <Main></Main>
         </div>
         <div className='header-link-right'>header-link-right</div>
         
