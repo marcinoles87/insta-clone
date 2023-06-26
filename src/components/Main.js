@@ -1,9 +1,15 @@
 import React from 'react'
 import './main.scss'
 
-function Main() {
+function Main({friend}) {
+
+  console.log(friend)
+
+  const randomUser = Math.random()*10
   return (
-    <div className='main-container'></div>
+    <div className='main-container'>
+        {/* {friend[randomUser].picture.thumbnail} */}
+    </div>
   )
 }
 

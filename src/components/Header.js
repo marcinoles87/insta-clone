@@ -3,23 +3,23 @@ import Main from './Main';
 import './header.scss'
 
 function Header({friend}) {
-  const key = Math.random()*1000;
+  const key = Math.random(100)*100;
   return (
     <div className='header-container'>
         <div className='header-friend-logo'>
-          {friend.map( (friend) => {
+          {friend.map( (friend , index) => {
             return(
-              <>
-              <li key={key}> 
+              <div key={friend.index}>
+              <li> 
               <img className='header-friend-photo' src={friend.picture.thumbnail} alt='friend'></img>
               
               </li>
-              </>
+              </div>
             )
           })}
         </div>
         <div className='header-main'>
-          <Main></Main>
+          <Main friend={friend}></Main>
         </div>
         <div className='header-link-right'>header-link-right</div>
         
