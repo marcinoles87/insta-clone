@@ -5,25 +5,36 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
 
-    .nav-logo{
-        width: 20vw;
 
-        .logo{
-            width: 100%;
-        }
-    }
+    .nav-search{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
 
         .search-icon{
-            width: 30%;
+            width: 20%;
             transform: scale(0.1);
         }
 
         span{
             margin-right: 20px;
         }
+    }
+
+
+    .nav-logo{
+        width: 20%;
+
+        .logo{
+            width: 100%;
+        }
+    }
+
+      
 
     
 
