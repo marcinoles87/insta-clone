@@ -1,0 +1,15 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+
+    img{
+
+        width: 40%;
+        height: 30%;
+        object-fit: contain;
+    }
+}
