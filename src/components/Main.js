@@ -1,14 +1,12 @@
 import React from 'react'
 import './main.scss'
+import profil from '../img/profil.jpg'
 
 function Main({friend}) {
 
-  console.log(friend)
-
-  const randomUser = Math.random()*10
   return (
     <div className='main-container'>
-        {/* {friend[randomUser].picture.thumbnail} */}
+       <img src={profil} alt='profil-img'></img>
     </div>
   )
 }

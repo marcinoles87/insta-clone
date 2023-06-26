@@ -9,7 +9,7 @@ function Header({friend}) {
         <div className='header-friend-logo'>
           {friend.map( (friend , index) => {
             return(
-              <div key={friend.index}>
+              <div key={index}>
               <li> 
               <img className='header-friend-photo' src={friend.picture.thumbnail} alt='friend'></img>
               
