@@ -7,16 +7,18 @@ function Profil({friend , profil}) {
     console.log(friend[id])
 
     
-
+  const idD = friend[id].id.value
 
    
   return (
     <div>
         
-        <p></p>
+        <p>{friend.filter( (myProfil , index) => {
+          return myProfil.id.value === idD
+        })}</p>
 
 
-        <p>{friend.map(  (myPhoto , index) => {
+        {/* <p>{friend.map(  (myPhoto , index) => {
             
             
             return(
@@ -26,7 +28,7 @@ function Profil({friend , profil}) {
                 </div>
            )
         })}
-        </p>
+        </p> */}
 
 
         <p>User City</p>
