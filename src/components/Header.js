@@ -12,6 +12,7 @@ function Header({friend}) {
               <div key={index}>
               <li> 
               <img className='header-friend-photo' src={friend.picture.thumbnail} alt='friend'></img>
+              <p>{friend.name.first}</p>
               
               </li>
               </div>
