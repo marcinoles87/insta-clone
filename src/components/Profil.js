@@ -20,7 +20,6 @@ function Profil({friend , profil}) {
             )
         })}</p>
         <p>User City</p>
-        <img src={profil} alt='profil-img'></img>
         <img src='#' alt='userPhoto'></img>
     </div>
   )
