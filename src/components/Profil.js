@@ -3,7 +3,10 @@
 function Profil({friend}) {
 
 
-  //   console.log(friend.length)
+    console.log(friend)
+
+    const selected = friend.slice(0,1)
+    console.log(selected)
   //        const id = Math.floor(Math.random()*friend.length);
   //   console.log(friend[id])
 
@@ -16,9 +19,9 @@ function Profil({friend}) {
     <div>
         
      
-      {/* <p>{myProfil.name}</p> */}
+    
 
-        {friend.map(  (friend , index) => {
+        {selected.map(  (friend , index) => {
             
             
             return(
