@@ -1,5 +1,15 @@
+.profil-name{
+    font-size: larger;
+}
+
+.profil-info{
+    font-weight: 800;
+    
+}
+
+
 .profil-photo{
-    width: 40vw;
+    max-width: 100%;
     height: 60vh;
     object-fit:cover;
     background-color: red;
