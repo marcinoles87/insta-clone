@@ -1,4 +1,4 @@
-
+import './profil.scss'
 
 function Profil({friend}) {
 
