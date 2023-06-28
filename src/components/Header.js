@@ -1,5 +1,6 @@
 import React from 'react'
 import Main from './Main';
+import Coments from './Coments';
 import './header.scss'
 
 function Header({friend}) {
@@ -22,7 +23,9 @@ function Header({friend}) {
         <div className='header-main'>
           <Main friend={friend}></Main>
         </div>
-        <div className='header-link-right'>header-link-right</div>
+        <div className='header-link-right'>
+          <Coments></Coments>
+        </div>
         
     
     </div>

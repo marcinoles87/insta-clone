@@ -4,6 +4,7 @@ import axios from 'axios'
 import './App.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
+import Coments from './components/Coments';
 
 function App() {
 
@@ -28,6 +29,7 @@ console.log(friend)
     <div className="App">
       <Navigation></Navigation>
       <Header friend={friend}></Header>
+      
     </div>
   );
 }
