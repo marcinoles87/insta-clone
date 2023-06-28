@@ -7,35 +7,19 @@ function Profil({friend}) {
 
     const selected = friend.slice(0,1)
     console.log(selected)
-  //        const id = Math.floor(Math.random()*friend.length);
-  //   console.log(friend[id])
 
-    
-  // const idD = friend[id]
-
-  // const myProfil = friend.filter(my => my.id.length === friend.id)
-  //  console.log(myProfil)
   return (
-    <div>
-        
-     
-    
-
+    <div className="profil-container">
         {selected.map(  (friend , index) => {
-            
-            
             return(
-                <div key={index}>
-                <p>{friend.name.last}</p>
-                <img src={friend.picture.large} alt='photos'></img>
+                <div className="profil-card" key={index}>
+                    <p className="profil-info">{friend.name.last} {friend.name.first}</p>
+                    <p className="profil-info">{friend.location.country}</p>
+                    <img className="profil-photo" src={friend.picture.large} alt='photos'></img>
                 </div>
            )
         })}
         
-
-
-        <p>User City</p>
-        <img src='#' alt='userPhoto'></img>
     </div>
   )
 }
