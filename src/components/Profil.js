@@ -1,34 +1,34 @@
-import React, { useEffect } from 'react'
 
-function Profil({friend , profil}) {
+
+function Profil({friend}) {
+
 
     console.log(friend.length)
          const id = Math.floor(Math.random()*friend.length);
     console.log(friend[id])
 
     
-  const idD = friend[id].id.value
+  const idD = friend[id]
 
-   
+  const myProfil = friend.filter(my => my.id.length === friend.id)
+   console.log(myProfil)
   return (
     <div>
         
-        <p>{friend.filter( (myProfil , index) => {
-          return myProfil.id.value === idD
-        })}</p>
+     
+      {/* <p>{myProfil.name}</p> */}
 
-
-        {/* <p>{friend.map(  (myPhoto , index) => {
+        <p>{friend.map(  (myPhoto , index) => {
             
             
             return(
                 <div>
                 <p>{friend[id].name.last}</p>
-                <img src={friend[id].picture.large} alt='photo'></img>
+                <img src={friend[id].picture.large} alt='photos'></img>
                 </div>
            )
         })}
-        </p> */}
+        </p>
 
 
         <p>User City</p>

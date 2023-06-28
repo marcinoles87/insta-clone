@@ -7,7 +7,7 @@ function Main({friend}) {
 
   return (
     <div className='main-container'>
-       <Profil friend={friend} profil={profil}></Profil>
+       <Profil friend={friend.filter( (item) => item.gender !== 'male')} profil={profil}></Profil>
     </div>
   )
 }
