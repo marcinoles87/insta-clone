@@ -9,11 +9,11 @@ import Navigation from './components/Navigation';
 function App() {
 
   const [friend , setFriend ] = useState([]);
-  const [imagesProfil , setImageProfil ] = useState();
+  const [imagesProfil , setImageProfil ] = useState([]);
 
 const baseURL = "https://randomuser.me/api/?results=15";
 
-const secondURL = "https://picsum.photos/200/300"
+
 
 useEffect( () => {
   axios.get(`${baseURL}`).then( (response) => {
@@ -28,12 +28,12 @@ useEffect( () => {
 
 
 useEffect( () => {
-  axios.get(`${secondURL}`).then( (response) => {
-    setImageProfil(response.data);
-   
+  fetch("https://picsum.photos/200/300").then( (response) => {
+    setImageProfil(response.url);
+   console.log(response)
   } )
 
-  console.log(imagesProfil)
+  
   
 
 }, [])
@@ -43,7 +43,7 @@ console.log(imagesProfil)
   return (
     <div className="App">
       <Navigation></Navigation>
-      <Header friend={friend}></Header>
+      <Header friend={friend} imagesProfil={imagesProfil}></Header>
       
     </div>
   );
