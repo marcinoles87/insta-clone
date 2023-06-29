@@ -3,7 +3,7 @@ import Main from './Main';
 import Coments from './Coments';
 import './header.scss'
 
-function Header({friend}) {
+function Header({friend , imagesprofil}) {
   const key = Math.random(100)*100;
   return (
     <div className='header-container'>
@@ -21,7 +21,7 @@ function Header({friend}) {
           })}
         </div>
         <div className='header-main'>
-          <Main friend={friend}></Main>
+          <Main friend={friend} imagesprofil={imagesprofil}></Main>
         </div>
         <div className='header-link-right'>
           <Coments></Coments>

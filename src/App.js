@@ -43,7 +43,7 @@ console.log(imagesProfil)
   return (
     <div className="App">
       <Navigation></Navigation>
-      <Header friend={friend} imagesProfil={imagesProfil}></Header>
+      <Header friend={friend} imagesprofil={imagesProfil}></Header>
       
     </div>
   );
