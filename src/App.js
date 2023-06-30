@@ -4,8 +4,8 @@ import axios from 'axios'
 import './App.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
-import Myprofil  from './components/pages/Myprofil';
-import { BrowserRouter as Router , Route , Routes } from 'react-router-dom';
+
+
 
 
 function App() {
@@ -38,17 +38,8 @@ console.log(imagesProfil)
     <div className="App">
       <Navigation></Navigation>
       <Header friend={friend} imagesprofil={imagesProfil}></Header>
-
-      <Router>
-      <Routes>
     
-        <Route path='myprofil' element={<Myprofil></Myprofil>}> </Route>
-         
-        
-         
-      </Routes>
-    </Router>
-      
+     
     </div>
   );
 }
