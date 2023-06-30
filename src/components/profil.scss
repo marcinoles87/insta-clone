@@ -10,6 +10,13 @@
 .profil-card-up{
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
+
+    .profil-card-name{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
 }
 
 
