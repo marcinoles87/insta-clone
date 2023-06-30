@@ -13,9 +13,12 @@ function Profil({friend , imagesprofil}) {
         {selected.map(  (friend , index) => {
             return(
                 <div className="profil-card" key={index}>
-                    <img className="profil-photo" src={friend.picture.thumbnail} alt='photos'></img>
-                    <p className="profil-name">{friend.name.last} {friend.name.first}</p>
-                    <p className="profil-info">{friend.location.country}</p>
+                  <div className='profil-card-up'> 
+                        <img className="profil-photo" src={friend.picture.thumbnail} alt='photos'></img>
+                        <p className="profil-name">{friend.name.last} {friend.name.first}</p>
+                        <p className="profil-info">{friend.location.country}</p>
+                    </div>
+                   
                     <img className='profil-main-photo' src={imagesprofil} alt='pd'></img>
                     
 

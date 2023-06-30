@@ -13,22 +13,17 @@ function App() {
 
 const baseURL = "https://randomuser.me/api/?results=15";
 
-
-
 useEffect( () => {
   axios.get(`${baseURL}`).then( (response) => {
     setFriend(response.data.results);
    
   } )
-
-  console.log(friend[0])
   
-
 }, [])
 
 
 useEffect( () => {
-  fetch("https://picsum.photos/200/300").then( (response) => {
+  fetch("https://picsum.photos/300/400").then( (response) => {
     setImageProfil(response.url);
    console.log(response)
   } )
