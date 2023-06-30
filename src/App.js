@@ -23,14 +23,11 @@ useEffect( () => {
 
 
 useEffect( () => {
-  fetch("https://picsum.photos/300/400").then( (response) => {
+  fetch("https://picsum.photos/200/300").then( (response) => {
     setImageProfil(response.url);
    console.log(response)
   } )
-
   
-  
-
 }, [])
 
 console.log(imagesProfil)
