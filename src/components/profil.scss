@@ -1,7 +1,14 @@
 .profil-container{
     width: 100%;
     height: 80vh;
-    background-color: rgb(231, 231, 231);
+    
+
+    i {
+        position:sticky;
+        top:50px;
+        left: 50%;
+
+    }
     
 }
 

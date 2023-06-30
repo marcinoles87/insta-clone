@@ -23,6 +23,7 @@ function Profil({friend , imagesprofil}) {
                     </div>
                    
                     <img className='profil-main-photo' src={imagesprofil} alt='pd'></img>
+                    <i class="fa-solid fa-chevron-right fa-lg"></i>
                     
 
                 </div>
