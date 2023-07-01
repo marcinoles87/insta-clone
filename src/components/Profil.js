@@ -20,6 +20,8 @@ const index = friend.length
 
     console.log(randomUser)
 
+    
+
   return (
     <div className="profil-container">
         {selected.map(  (friend , index) => {
@@ -42,15 +44,9 @@ const index = friend.length
            )
         })}
 
-        {randomUser.map( (my) => {
-          return(
-            <div>
-              <p>{my.name.last}</p>
-              
-            </div>
-          )
-        })}
-        
+
+      
+   
     </div>
   )
 }

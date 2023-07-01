@@ -15,9 +15,9 @@ function Navigation() {
             <img className='search-icon' src={search} alt='search icon'></img>
             <span>Search</span>
             <input placeholder='search...'></input>
-            <i class="fa-solid fa-house"></i>
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-solid fa-envelope"></i>
+            <i className="fa-solid fa-house"></i>
+            <i className="fa-solid fa-heart"></i>
+            <i className="fa-solid fa-envelope"></i>
         </div>
 
     </nav>
