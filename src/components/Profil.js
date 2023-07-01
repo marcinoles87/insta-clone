@@ -1,12 +1,24 @@
+import { useState } from 'react'
 import './profil.scss'
 
 function Profil({friend , imagesprofil}) {
 
+    const [randomUser , setRandomUser] = useState()
+    let selected = friend.slice(0,1)
+    
 
-    console.log(friend)
+    const handleOnClick = () => {
+const index = friend.length
+      console.log(index)
+      const randomNumber = Math.floor(Math.random()*index)
+      console.log(randomNumber)
+      
+      setRandomUser( 
+       friend.slice(randomNumber-1,randomNumber)
+      )
+    }
 
-    const selected = friend.slice(0,1)
-    console.log(selected)
+    console.log(randomUser)
 
   return (
     <div className="profil-container">
@@ -23,11 +35,20 @@ function Profil({friend , imagesprofil}) {
                     </div>
                    
                     <img className='profil-main-photo' src={imagesprofil} alt='pd'></img>
-                    <i class="fa-solid fa-chevron-right fa-lg"></i>
+                    <i className="fa-solid fa-chevron-right fa-lg" onClick={handleOnClick}></i>
                     
 
                 </div>
            )
+        })}
+
+        {randomUser.map( (my) => {
+          return(
+            <div>
+              <p>{my.name.last}</p>
+              
+            </div>
+          )
         })}
         
     </div>
