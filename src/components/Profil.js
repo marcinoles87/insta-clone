@@ -3,12 +3,12 @@ import './profil.scss'
 
 function Profil({friend , imagesprofil}) {
 
-    const [randomUser , setRandomUser] = useState()
+    const [randomUser , setRandomUser] = useState([])
     let selected = friend.slice(0,1)
     
 
     const handleOnClick = () => {
-const index = friend.length
+      const index = friend.length
       console.log(index)
       const randomNumber = Math.floor(Math.random()*index)
       console.log(randomNumber)
@@ -44,7 +44,14 @@ const index = friend.length
            )
         })}
 
-
+        {randomUser.map( (item , index) => {
+          return(
+            < div key={index}>
+            <p>{item.name.last}</p>
+            <img src={item.picture.thumbnail} alt='photos'></img>
+            </div>
+          )
+        })}
       
    
     </div>
