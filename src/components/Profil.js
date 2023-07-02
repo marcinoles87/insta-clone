@@ -43,7 +43,7 @@ function Profil({friend , imagesprofil}) {
                          
                         
                     <img className='profil-main-photo' src={imagesprofil} alt='pd'></img>
-                    <i className="fa-solid fa-chevron-right fa-lg" onClick={handleOnClick}></i>
+                    <button onClick={handleOnClick}>See my Friend</button>
                     
                    </div>
                    
