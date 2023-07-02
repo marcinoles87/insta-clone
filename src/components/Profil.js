@@ -33,14 +33,16 @@ function Profil({friend , imagesprofil}) {
                               <p className="profil-name">{friend.name.last} {friend.name.first}</p>
                               <p className="profil-info">{friend.location.country}</p>
                         </div>
+                         
                         
-                    </div>
-                   
-                   <div className='profil-main'>
-
                     <img className='profil-main-photo' src={imagesprofil} alt='pd'></img>
                     <i className="fa-solid fa-chevron-right fa-lg" onClick={handleOnClick}></i>
-                    </div>
+                    
+                   </div>
+                   
+                   
+
+                  
                     
                     <div className='profil-best-friend'>
 
