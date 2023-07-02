@@ -33,14 +33,15 @@
  
 
     .profil-main-photo{
-        width: 30%;
+        width: 30vw;
+        height: 50vh;
     
     }
 }
 
 .profil-card-up{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 10px;
 
     .profil-card-name{
