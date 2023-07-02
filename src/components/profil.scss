@@ -30,10 +30,12 @@
 .profil-card{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
  
 
     .profil-main-photo{
-        width: 30vw;
+        width: 25vw;
         height: 50vh;
     
     }

@@ -12,8 +12,13 @@ function Profil({friend , imagesprofil}) {
       console.log(index)
       const randomNumber = Math.floor(Math.random()*index)
       console.log(randomNumber)
-      
+      if(randomNumber === 0){
+        setRandomUser(
+          'no one friend'
+        )
+      }
       setRandomUser( 
+        
        friend.slice(randomNumber-1,randomNumber)
       )
     }
