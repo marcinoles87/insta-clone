@@ -40,18 +40,21 @@ function Profil({friend , imagesprofil}) {
                     <i className="fa-solid fa-chevron-right fa-lg" onClick={handleOnClick}></i>
                     
 
-                </div>
-           )
-        })}
-
-        {randomUser.map( (item , index) => {
+                    {randomUser.map( (item , index) => {
           return(
             < div key={index}>
-            <p>{item.name.last}</p>
+              <h1>Best Friend : </h1>
+            <p>{item.name.last} {item.name.first}</p>
             <img src={item.picture.thumbnail} alt='photos'></img>
             </div>
           )
         })}
+
+                </div>
+           )
+        })}
+
+       
       
    
     </div>
