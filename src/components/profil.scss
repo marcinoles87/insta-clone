@@ -13,6 +13,11 @@
     
 }
 
+.profil-best-friend{
+    display: flex;
+    flex-direction: row;
+}
+
 .profil-name{
     font-size: larger;
 }
@@ -23,6 +28,8 @@
 }
 
 .profil-card{
+    display: flex;
+    flex-direction: row;
     width: 100%;
     height: 100%;
 
@@ -34,7 +41,7 @@
 
 .profil-card-up{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-bottom: 10px;
 
     .profil-card-name{
