@@ -27,7 +27,7 @@ function Header({friend , imagesprofil}) {
           <Main friend={friend} imagesprofil={imagesprofil}></Main>
         </div>
         <div className='header-link-right'>
-          <Coments></Coments>
+          <Coments friend={friend}></Coments>
         </div>
         
     
