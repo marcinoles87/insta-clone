@@ -6,6 +6,7 @@ function Profil({friend , imagesprofil}) {
     const [randomUser , setRandomUser] = useState([])
     let selected = friend.slice(0,1)
     
+    console.log(friend)
 
     const handleOnClick = () => {
       const index = friend.length
@@ -52,9 +53,11 @@ function Profil({friend , imagesprofil}) {
                     {randomUser.map( (item , index) => {
           return(
             < div key={index}>
-              <h1>Best Friend ({randomUser.length}) : </h1>
+              <h1>Best Friend  : </h1>
             <p>{item.name.last} {item.name.first}</p>
             <img src={item.picture.thumbnail} alt='photos'></img>
+            <p><span>{item.location.country}</span></p>
+            <p>{item.location.city}</p>
             </div>
           )
         })}

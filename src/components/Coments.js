@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 function Coments({friend}) {
 
   const [comments , setComments] = useState([])
+  const [date , setDate] = useState()
 
  const handleOnChange = (e) =>{
   const valueInput = e.target.value;
@@ -16,6 +17,7 @@ function Coments({friend}) {
     const year = todayDate.getFullYear();
     const fullDate = `${day}.${month}.${year}`
     console.log(fullDate)
+    setDate(fullDate)
   
   }
   return (
@@ -23,6 +25,17 @@ function Coments({friend}) {
         <h1 >Comments</h1>
         <input className='comments-input' placeholder='add some comments...' onChange={handleOnChange}></input>
         <button className='comments-button-add' onClick={handleAddComments}>Add</button>
+        <p>{date}</p>
+        {comments.map( (comment) => {
+          return(
+            <div>
+              <li>
+                <p>{comment}</p>
+              </li>
+              </div>
+          )
+
+        })}
     </div>
   )
 }
