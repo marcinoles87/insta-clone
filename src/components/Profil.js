@@ -23,10 +23,6 @@ function Profil({friend , imagesprofil}) {
       )
     }
 
-    console.log(randomUser)
-
-    
-
   return (
     <div className="profil-container">
         {selected.map(  (friend , index) => {
@@ -56,7 +52,7 @@ function Profil({friend , imagesprofil}) {
                     {randomUser.map( (item , index) => {
           return(
             < div key={index}>
-              <h1>Best Friend : </h1>
+              <h1>Best Friend ({randomUser.length}) : </h1>
             <p>{item.name.last} {item.name.first}</p>
             <img src={item.picture.thumbnail} alt='photos'></img>
             </div>
