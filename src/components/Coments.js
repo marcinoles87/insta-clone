@@ -5,16 +5,18 @@ function Coments({friend}) {
   const [comments , setComments] = useState([])
 
  const handleOnChange = (e) =>{
-  const valueInput = e.target.value
-  console.log(valueInput)
+  const valueInput = e.target.value;
+  setComments(valueInput)
  }
    
-  const handleAddComments = (e) => {
-
-    setComments()
-    console.log(comments)
-    console.log(e.target.value)
-
+  const handleAddComments = () => {
+    const todayDate = new Date();
+    const day = todayDate.getDate();
+    const month = todayDate.getMonth();
+    const year = todayDate.getFullYear();
+    const fullDate = `${day}.${month}.${year}`
+    console.log(fullDate)
+  
   }
   return (
     <div className='comments-container'>
