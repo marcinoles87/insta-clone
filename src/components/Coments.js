@@ -27,6 +27,7 @@ function Coments({friend}) {
 
     setAllComents( [...comments ,
       {
+        friendId : friend[0].name.last,
         date : fullDate,
         text : comment,
       }
@@ -47,6 +48,7 @@ function Coments({friend}) {
         {comments.map( (item , index) => {
           return(
             <div key={index}>
+              <h5>{item.friendId}</h5>
               <p>{item.text}</p>
               <p>{item.date}</p>
               </div>
