@@ -2,15 +2,16 @@ import React, { useState } from 'react'
 
 function Coments({friend}) {
 
-  const [comment , setComment] = useState();
+  let [comment , setComment] = useState('');
   const [date , setDate] = useState();
   const [comments , setAllComents] = useState([])
 
-  const ar = []
+  
 
  const handleOnChange = (e) =>{
-  const valueInput = e.target.value;
-  setComment(valueInput)
+  // const valueInput = e.target.value;
+  setComment(
+    e.target.value)
  }
    
   const handleAddComments = (e) => {
@@ -22,18 +23,19 @@ function Coments({friend}) {
     const fullDate = `${day}.${month}.${year}`
     console.log(fullDate)
     setDate(fullDate)
+    
 
-    setAllComents( [
+    setAllComents( [...comments ,
       {
-        date : {date},
-        text : {comment},
+        date : fullDate,
+        text : comment,
       }
     ])
     
-    const newComment = [...comments , comment];
+    
   
 
-    console.log(newComment)
+    console.log(comments)
   }
   return (
     <div className='comments-container'>
