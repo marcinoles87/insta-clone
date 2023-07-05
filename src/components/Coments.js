@@ -25,9 +25,10 @@ function Coments({friend}) {
     setDate(fullDate)
     
 
+    const randomIndex = Math.floor(Math.random()*friend.length)
     setAllComents( [...comments ,
       {
-        friendId : friend[0].name.last,
+        friendId : friend[randomIndex].name.last + " "+ friend[randomIndex].name.first,
         date : fullDate,
         text : comment,
       }
@@ -48,7 +49,7 @@ function Coments({friend}) {
         {comments.map( (item , index) => {
           return(
             <div key={index}>
-              <h5>{item.friendId}</h5>
+              <h4>{item.friendId}</h4>
               <p>{item.text}</p>
               <p>{item.date}</p>
               </div>
