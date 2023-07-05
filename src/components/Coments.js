@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
+import './comments.scss'
 
 function Coments({friend}) {
 
   let [comment , setComment] = useState('');
-  const [date , setDate] = useState();
   const [comments , setAllComents] = useState([])
 
   
@@ -22,17 +22,20 @@ function Coments({friend}) {
     const year = todayDate.getFullYear();
     const fullDate = `${day}.${month}.${year}`
     console.log(fullDate)
-    setDate(fullDate)
     
-
     const randomIndex = Math.floor(Math.random()*friend.length)
     setAllComents( [...comments ,
       {
         friendId : friend[randomIndex].name.last + " "+ friend[randomIndex].name.first,
         date : fullDate,
         text : comment,
+        img : friend[randomIndex].picture.thumbnail
       }
     ])
+
+    setComment(
+      e.target.value = ''
+    )
     
     
   
@@ -48,10 +51,11 @@ function Coments({friend}) {
        
         {comments.map( (item , index) => {
           return(
-            <div key={index}>
-              <h4>{item.friendId}</h4>
-              <p>{item.text}</p>
-              <p>{item.date}</p>
+            <div key={index} className='comment'>
+              <img className="profil-photo" src={item.img} alt='photos'></img>
+              <h4 className='comments-user'>{item.friendId}</h4>
+              <p className='comments-text'>{item.text}</p>
+              <p className='comments-date'>{item.date}</p>
               </div>
           )
         })}
