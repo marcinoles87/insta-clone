@@ -1,12 +1,19 @@
 import React from 'react'
 
 function Myprofil({friend}) {
+  
+  const my = friend.slice(0,1)
+
   return (
-    <div className='myprofil-container'>
+<div>
+    {my.map(  (item , index) => {
+      return(
+      <div key={index} className='myprofil-container'>
       <img className='myprofil-photo' src="#" alt='myprofil-face'></img>
       <div className='myprofil-name'>
-        <p>my name</p>
-        <p>second name</p>
+        <p>{item.name.first}</p>
+        <p>{item.name.last}</p>
+        
         <p> info</p>
         <div className='profil-gallery'>
 
@@ -14,6 +21,10 @@ function Myprofil({friend}) {
       </div>
     
     </div>
+      )
+    })}
+    </div>
+    
   )
 }
 
