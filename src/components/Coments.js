@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './comments.scss'
 
 function Coments({friend}) {
@@ -13,8 +13,11 @@ function Coments({friend}) {
   setComment(
     e.target.value)
  }
-   
+    
+
   const handleAddComments = (e) => {
+
+   
     e.preventDefault()
     const todayDate = new Date();
     const day = todayDate.getDate();
@@ -24,6 +27,8 @@ function Coments({friend}) {
     console.log(fullDate)
     
     const randomIndex = Math.floor(Math.random()*friend.length)
+
+   
     setAllComents( [...comments ,
       {
         friendId : friend[randomIndex].name.last + " "+ friend[randomIndex].name.first,
@@ -33,19 +38,23 @@ function Coments({friend}) {
       }
     ])
 
-    setComment(
-      e.target.value = ''
-    )
+    setComment( '')
+
+  }
+
+  
+
+    
     
     
   
 
     console.log(comments)
-  }
+  
   return (
     <div className='comments-container'>
         <h1 >Comments</h1>
-        <input className='comments-input' placeholder='add some comments...' onChange={handleOnChange}></input>
+        <input className='comments-input' placeholder='add some comments...' onChange={handleOnChange} value={comment}></input>
         <button className='comments-button-add' onClick={handleAddComments}>Add</button>
     
        
