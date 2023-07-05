@@ -1,4 +1,5 @@
 import React from 'react'
+import './myprofil.scss'
 
 function Myprofil({friend}) {
   
@@ -9,7 +10,7 @@ function Myprofil({friend}) {
     {my.map(  (item , index) => {
       return(
       <div key={index} className='myprofil-container'>
-      <img className='myprofil-photo' src="#" alt='myprofil-face'></img>
+      <img className='myprofil-photo' src={item.picture.large} alt='myprofil-face'></img>
       <div className='myprofil-name'>
         <p>{item.name.first}</p>
         <p>{item.name.last}</p>
