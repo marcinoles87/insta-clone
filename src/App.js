@@ -4,6 +4,7 @@ import axios from 'axios'
 import './App.css';
 import Header from './components/Header';
 import Navigation from './components/Navigation';
+import MyProfil from '../src/components/pages/Myprofil'
 
 
 
@@ -38,7 +39,7 @@ console.log(imagesProfil)
     <div className="App">
       <Navigation></Navigation>
       <Header friend={friend} imagesprofil={imagesProfil}></Header>
-    
+      <MyProfil friend={friend}></MyProfil>
      
     </div>
   );
