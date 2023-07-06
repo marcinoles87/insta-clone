@@ -46,20 +46,22 @@
 
 
     .profil-gallery{
-        background-color: rgb(192, 192, 208);
+        // background-color: rgb(192, 192, 208);
         width: 100vw;
         height: 100vh;
         margin-top: 20px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         img{
-            width: 30%;
-            height: 35%;
-            margin: 10px;
+            width: 28%;
+            height: 40%;
+            margin: 10px 20px;
+            
+
         }
     }
 
