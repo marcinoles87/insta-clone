@@ -12,13 +12,16 @@ function Myprofil({friend}) {
     {my.map(  (item , index) => {
       return(
       <div key={index} className='myprofil-container'>
-      <img className='myprofil-photo' src={item.picture.large} alt='myprofil-face'></img>
+      
       <div className='myprofil-info'>
+        <img className='myprofil-photo' src={item.picture.large} alt='myprofil-face'></img>
+          <div className='myprofil-text'>
         <p className='myprofil-name'>{item.name.first} {item.name.last}</p>
-        <p className='myprofil-country'>{item.location.country}</p>
-        <p className='myprofi-fallowers'>{followers} followers</p>
+        <p className='myprofil-country'>{item.location.country} / {item.location.city}</p>
+        <p className='myprofil-followers'>{followers} followers</p>
+        </div>
         
-        <p> info</p>
+        
         <div className='profil-gallery'>
 
         </div>
