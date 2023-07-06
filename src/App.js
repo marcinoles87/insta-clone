@@ -39,7 +39,7 @@ console.log(imagesProfil)
     <div className="App">
       <Navigation></Navigation>
       <Header friend={friend} imagesprofil={imagesProfil}></Header>
-      <MyProfil friend={friend}></MyProfil>
+      <MyProfil friend={friend} images={imagesProfil}></MyProfil>
      
     </div>
   );

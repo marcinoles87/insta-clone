@@ -1,7 +1,7 @@
 import React from 'react'
 import './myprofil.scss'
 
-function Myprofil({friend}) {
+function Myprofil({friend , images}) {
 
   const followers = (Math.random()*10000).toPrecision(7);
   
@@ -25,7 +25,13 @@ function Myprofil({friend}) {
         
         
         <div className='profil-gallery'>
-
+          <img src={images} alt='x'></img>
+          <img src={images} alt='x'></img>
+          <img src={images} alt='x'></img>
+          <img src={images} alt='x'></img>
+          <img src={images} alt='x'></img>
+          <img src={images} alt='x'></img>
+          <img src={images} alt='x'></img>
         
       </div>
     
