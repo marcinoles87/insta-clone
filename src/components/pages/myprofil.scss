@@ -1,9 +1,24 @@
 .myprofil-container{
-    
+
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 200px;
 
+    .myprofil-photo{
+        display: flex;
+        flex-direction: column;
+        width: 10vw;
+        height: 10vh;
+        border-radius: 20px;
+    }
+    
+    .myprofil-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
 
 }
