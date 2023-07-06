@@ -20,11 +20,13 @@ function Myprofil({friend}) {
         <p className='myprofil-country'>{item.location.country} / {item.location.city}</p>
         <p className='myprofil-followers'>{followers} followers</p>
         </div>
+
+         </div>
         
         
         <div className='profil-gallery'>
 
-        </div>
+        
       </div>
     
     </div>
