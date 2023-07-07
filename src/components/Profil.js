@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './profil.scss'
+import Myprofil from './pages/Myprofil'
 
 function Profil({friend , imagesprofil}) {
 
@@ -22,6 +23,13 @@ function Profil({friend , imagesprofil}) {
         
        friend.slice(randomNumber-1,randomNumber)
       )
+
+
+    }
+
+    const handleChangePage = (e) => {
+      e.location.href = '#';
+
     }
 
   return (
@@ -33,7 +41,7 @@ function Profil({friend , imagesprofil}) {
                        
 
                             <div className='profil-card-name'>
-                            <img className="profil-photo" src={friend.picture.thumbnail} alt='photos'></img>
+                            <img className="profil-photo" src={friend.picture.thumbnail} alt='photos' onClick={handleChangePage}></img>
                               <p className="profil-name">{friend.name.last} {friend.name.first}</p>
                               <p className="profil-info">{friend.location.country}</p>
                             </div>

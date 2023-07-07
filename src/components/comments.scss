@@ -11,12 +11,22 @@
     }
 
     .comments-text{
-
+        
     }
 
 
     .comments-date{
         font-size: 10px;
+    }
+
+    i{
+        margin-left: 5px;
+        cursor: pointer;
+        transition: 0.6s ease;
+    }
+
+    i:hover{
+        background-color: blue;
     }
 
     }
