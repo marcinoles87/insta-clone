@@ -45,8 +45,9 @@ function Coments({friend}) {
 
   
 
-  const handleLikes = () => {
-    setLikes(true)
+  const handleLikes = (e) => {
+    console.log(e)
+    setLikes(!likes)
   }
 
     
@@ -68,7 +69,7 @@ function Coments({friend}) {
             <div key={index} className='comment'>
               <img className="profil-photo" src={item.img} alt='photos'></img>
               <h4 className='comments-user'>{item.friendId}</h4>
-              <p className='comments-text'>{item.text} <i className="fa-regular fa-hand-point-up" onClick={handleLikes}></i> <i className="fa-regular fa-hand-point-down"></i></p>
+              <p className='comments-text'>{item.text} <i className={likes ?"fa-regular fa-hand-point-up" : "fa-regular fa-hand-point-up likes"  } onClick={handleLikes}></i> <i className="fa-regular fa-hand-point-down"></i></p>
               <p className='comments-date'>{item.date}</p>
               </div>
           )
