@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import './comments.scss'
 
 function Coments({friend}) {
 
   let [comment , setComment] = useState('');
   const [comments , setAllComents] = useState([])
+  const [likes , setLikes] = useState(false)
 
   
 
@@ -44,6 +45,10 @@ function Coments({friend}) {
 
   
 
+  const handleLikes = () => {
+    setLikes(true)
+  }
+
     
     
     
@@ -63,7 +68,7 @@ function Coments({friend}) {
             <div key={index} className='comment'>
               <img className="profil-photo" src={item.img} alt='photos'></img>
               <h4 className='comments-user'>{item.friendId}</h4>
-              <p className='comments-text'>{item.text} <i class="fa-regular fa-hand-point-up"></i> <i class="fa-regular fa-hand-point-down"></i></p>
+              <p className='comments-text'>{item.text} <i className="fa-regular fa-hand-point-up" onClick={handleLikes}></i> <i className="fa-regular fa-hand-point-down"></i></p>
               <p className='comments-date'>{item.date}</p>
               </div>
           )
