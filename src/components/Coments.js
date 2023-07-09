@@ -4,15 +4,14 @@ import './comments.scss'
 function Coments({friend}) {
 
   let [comment , setComment] = useState('');
-  const [comments , setAllComents] = useState([])
-  const [likes , setLikes] = useState(false)
+  const [comments , setAllComents] = useState([]);
+  const [likes , setLikes] = useState(true);
 
   
 
  const handleOnChange = (e) =>{
   // const valueInput = e.target.value;
-  setComment(
-    e.target.value)
+  setComment(e.target.value)
  }
     
 
@@ -46,8 +45,13 @@ function Coments({friend}) {
   
 
   const handleLikes = (e) => {
-    console.log(e.target)
-    setLikes(!likes)
+    
+    e.preventDefault();
+    
+
+    e.classList.toggle("fa-regular fa-hand-point-down")
+    
+    // setLikes(e.target = !likes)
   }
 
     
@@ -69,7 +73,7 @@ function Coments({friend}) {
             <div key={index} className='comment'>
               <img className="profil-photo" src={item.img} alt='photos'></img>
               <h4 className='comments-user'>{item.friendId}</h4>
-              <p className='comments-text'>{item.text} <i className={likes ?"fa-regular fa-hand-point-up" : "fa-regular fa-hand-point-up likes"  } onClick={handleLikes}></i> <i className="fa-regular fa-hand-point-down"></i></p>
+              <p className='comments-text'>{item.text} <i className={likes ? "fa-regular fa-hand-point-up" : "fa-regular fa-hand-point-down likes"  } onClick={handleLikes}></i> <i className="fa-regular fa-hand-point-down"></i></p>
               <p className='comments-date'>{item.date}</p>
               </div>
           )
