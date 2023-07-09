@@ -46,7 +46,7 @@ function Coments({friend}) {
   
 
   const handleLikes = (e) => {
-    console.log(e)
+    console.log(e.target)
     setLikes(!likes)
   }
 
