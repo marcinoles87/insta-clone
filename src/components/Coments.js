@@ -45,15 +45,17 @@ function Coments({friend}) {
    
   
 
-  const handleLikes = (e) => {
+  const handleLikes = (e)=> {
     
     e.preventDefault();
-    const fa = document.getElementById('hand')
+    const fa = document.querySelector('i')
    
-    console.log(e.target)
-    fa.classList.toggle("likes")
+    console.log(fa)
+    fa.classList.toggle(".likes")
     
-    // setLikes(e.target = !likes)
+    
+    setLikes( !likes)
+    
   }
 
     
