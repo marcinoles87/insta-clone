@@ -50,7 +50,8 @@ function Coments({friend}) {
     e.preventDefault();
     const fa = document.getElementById('hand')
    
-    fa.classList.toggle(".likes")
+    console.log(fa)
+    fa.classList.add("likes")
     
     // setLikes(e.target = !likes)
   }
