@@ -50,12 +50,13 @@ function Coments({friend}) {
     e.preventDefault();
     const fa = document.querySelector('i')
    
-    console.log(fa)
+    console.log(friend[0].id)
     fa.classList.toggle(".likes")
     
     
     setLikes( !likes)
     
+
   }
 
     
