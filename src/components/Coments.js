@@ -42,14 +42,15 @@ function Coments({friend}) {
 
   }
 
+   
   
 
   const handleLikes = (e) => {
     
     e.preventDefault();
-    
-
-    e.classList.toggle("fa-regular fa-hand-point-down")
+    const fa = document.getElementById('hand')
+   
+    fa.classList.toggle(".likes")
     
     // setLikes(e.target = !likes)
   }
@@ -73,7 +74,7 @@ function Coments({friend}) {
             <div key={index} className='comment'>
               <img className="profil-photo" src={item.img} alt='photos'></img>
               <h4 className='comments-user'>{item.friendId}</h4>
-              <p className='comments-text'>{item.text} <i className={likes ? "fa-regular fa-hand-point-up" : "fa-regular fa-hand-point-down likes"  } onClick={handleLikes}></i> <i className="fa-regular fa-hand-point-down"></i></p>
+              <p className='comments-text'>{item.text} <i id='hand' className={likes ? "fa-regular fa-hand-point-up" : "fa-regular fa-hand-point-down likes"  } onClick={handleLikes}></i> <i className="fa-regular fa-hand-point-down"></i></p>
               <p className='comments-date'>{item.date}</p>
               </div>
           )
