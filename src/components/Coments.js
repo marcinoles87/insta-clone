@@ -50,7 +50,7 @@ function Coments({friend}) {
     e.preventDefault();
     const fa = document.querySelector('i')
    
-    console.log(friend[0].id)
+    console.log(e.target)
     fa.classList.toggle(".likes")
     
     
