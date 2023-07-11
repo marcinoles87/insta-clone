@@ -9,7 +9,11 @@ function Navigation({friend}) {
   const handleOnChange = (e) =>{
     e.preventDefault();
 
-    console.log(friend)
+    
+    console.log(e.target.value)
+    console.log(friend[0].name.first)
+
+    
   }
 
   return (
