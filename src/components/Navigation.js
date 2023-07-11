@@ -4,7 +4,14 @@ import  './navigation.scss'
 import logo from '../img/Instagram.png';
 import search from '../img/search.jpg'
 
-function Navigation() {
+function Navigation({friend}) {
+
+  const handleOnChange = (e) =>{
+    e.preventDefault();
+
+    console.log(friend)
+  }
+
   return (
     <nav className='nav-container'>
         <div className='nav-logo'>
@@ -14,7 +21,7 @@ function Navigation() {
         <div className='nav-search'>
             <img className='search-icon' src={search} alt='search icon'></img>
             <span>Search</span>
-            <input placeholder='search...'></input>
+            <input placeholder='search...' onChange={handleOnChange} ></input>
             <i className="fa-solid fa-house"></i>
             <i className="fa-solid fa-heart"></i>
             <i className="fa-solid fa-envelope"></i>
