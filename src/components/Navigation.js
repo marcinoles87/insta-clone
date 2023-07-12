@@ -13,19 +13,10 @@ function Navigation({friend , setFriend , setSearch}) {
     const inputValue = e.target.value;
     const newFriend = [...friend ]
     const findFriend = newFriend.filter( friend => friend.name.first.includes(inputValue))
-    
-    
+   
+
+        setSearch(inputValue)
   
-   setSearch(inputValue)
-   setFriend(newFriend)
-
-   if(inputValue === ''){
-    setFriend(friend)
-    console.log('puste')
-   }
-    
-
-    
   }
 
   return (

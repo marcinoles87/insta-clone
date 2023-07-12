@@ -34,18 +34,19 @@ useEffect( () => {
   
 }, [])
 
-console.log(searchFriend)
+
 
   return (
     <div className="App">
       <Navigation 
             friend={friend.filter( fr => fr.name.first.includes(searchFriend))} 
+            // friend={friend}
             setFriend={setFriend} 
             setSearch={setSearch}>
 
       </Navigation>
 
-      <Header friend={friend} imagesprofil={imagesProfil}></Header>
+      <Header    friend={friend.filter( fr => fr.name.first.includes(searchFriend))} imagesprofil={imagesProfil}></Header>
       <MyProfil friend={friend} images={imagesProfil}></MyProfil>
      
     </div>
