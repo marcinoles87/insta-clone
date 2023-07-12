@@ -13,6 +13,7 @@ function Navigation({friend}) {
     console.log(e.target.value)
     console.log(friend[0].name.first)
 
+    const inputValue = e.target.value
     
   }
 
