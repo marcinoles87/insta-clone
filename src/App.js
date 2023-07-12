@@ -29,17 +29,17 @@ useEffect( () => {
 useEffect( () => {
   fetch("https://picsum.photos/200/300").then( (response) => {
     setImageProfil(response.url);
-   console.log(response)
+
   } )
   
 }, [])
 
-console.log(imagesProfil)
+console.log(searchFriend)
 
   return (
     <div className="App">
       <Navigation 
-            friend={friend.filter( friend => friend.name.first.includes(searchFriend))} 
+            friend={friend.filter( fr => fr.name.first.includes(searchFriend))} 
             setFriend={setFriend} 
             setSearch={setSearch}>
 
