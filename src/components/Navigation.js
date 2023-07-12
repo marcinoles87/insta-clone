@@ -10,10 +10,15 @@ function Navigation({friend}) {
     e.preventDefault();
 
     
-    console.log(e.target.value)
+  
     console.log(friend[0].name.first)
 
-    const inputValue = e.target.value
+    const inputValue = e.target.value;
+
+    const findFriend = friend.filter( friend => friend.name.first.includes(inputValue))
+    console.log(findFriend)
+    
+
     
   }
 
