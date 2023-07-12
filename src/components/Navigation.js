@@ -4,19 +4,21 @@ import  './navigation.scss'
 import logo from '../img/Instagram.png';
 import search from '../img/search.jpg'
 
-function Navigation({friend}) {
+function Navigation({friend , setFriend , setSearch}) {
 
   const handleOnChange = (e) =>{
+    
     e.preventDefault();
 
-    
-  
-    console.log(friend[0].name.first)
-
     const inputValue = e.target.value;
-
     const findFriend = friend.filter( friend => friend.name.first.includes(inputValue))
-    console.log(findFriend)
+    
+    setSearch(inputValue)
+  //  setFriend(findFriend)
+
+  //  if(inputValue === ''){
+  //   setFriend(friend)
+  //  }
     
 
     

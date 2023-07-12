@@ -13,6 +13,7 @@ function App() {
 
   const [friend , setFriend ] = useState([]);
   const [imagesProfil , setImageProfil ] = useState([]);
+  const [searchFriend , setSearch] = useState('')
 
 const baseURL = "https://randomuser.me/api/?results=15";
 
@@ -37,7 +38,13 @@ console.log(imagesProfil)
 
   return (
     <div className="App">
-      <Navigation friend={friend}></Navigation>
+      <Navigation 
+            friend={friend.filter( friend => friend.name.first.includes(searchFriend))} 
+            setFriend={setFriend} 
+            setSearch={setSearch}>
+
+      </Navigation>
+
       <Header friend={friend} imagesprofil={imagesProfil}></Header>
       <MyProfil friend={friend} images={imagesProfil}></MyProfil>
      
