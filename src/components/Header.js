@@ -6,6 +6,8 @@ import './header.scss'
 function Header({friend , imagesprofil}) {
   const key = Math.random(100)*100;
 
+ 
+
   return (
     <div className='header-container'>
         <div className='header-friend-logo'>
