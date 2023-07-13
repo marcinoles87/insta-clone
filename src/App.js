@@ -27,10 +27,12 @@ useEffect( () => {
 
 
 useEffect( () => {
-  fetch("https://picsum.photos/200/300").then( (response) => {
+  fetch("https://picsum.photos/200/300?random=3").then( (response) => {
     setImageProfil(response.url);
-
+  console.log(response)
   } )
+
+  
   
 }, [])
 
@@ -48,6 +50,8 @@ useEffect( () => {
 
       <Header    friend={friend.filter( fr => fr.name.first.includes(searchFriend))} imagesprofil={imagesProfil}></Header>
       <MyProfil friend={friend} images={imagesProfil}></MyProfil>
+
+      
      
     </div>
   );
