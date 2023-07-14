@@ -14,10 +14,9 @@ function Myprofil({friend , images}) {
       Math.floor(Math.random()*friend.length+1)
 
     )
-
-    
   }
   
+
   const my = friend.slice(spinUser-1,spinUser);
 
 
