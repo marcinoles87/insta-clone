@@ -48,7 +48,7 @@ function Profil({friend , imagesprofil}) {
                          
                         
                     <img className='profil-main-photo' src={imagesprofil} alt='pd'></img>
-                    <button onClick={handleOnClick}>See my Friend</button>
+                    {/* <button onClick={handleOnClick}>See my Friend</button> */}
                     
                    </div>
                    
@@ -56,7 +56,7 @@ function Profil({friend , imagesprofil}) {
 
                   
                     
-                    <div className='profil-best-friend'>
+                    {/* <div className='profil-best-friend'>
 
                     {randomUser.map( (item , index) => {
           return(
@@ -70,7 +70,7 @@ function Profil({friend , imagesprofil}) {
           )
         })}
 
-        </div>
+        </div> */}
 
                 </div>
            )
