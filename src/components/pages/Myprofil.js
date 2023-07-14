@@ -10,8 +10,9 @@ function Myprofil({friend , images}) {
   const handeChangeProfil = () => {
 
     setSpinUser(
-      
-      Math.floor(Math.random()*friend.length)
+
+      Math.floor(Math.random()*friend.length+1)
+
     )
 
     
