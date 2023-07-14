@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './myprofil.scss'
 
 function Myprofil({friend , images}) {
+
+  const [spinR , setSpinR] = useState(2)
 
   const followers = (Math.random()*10000).toPrecision(7);
 
   const handeChangeProfil = () => {
 
-    const change = Math.random()
+    setSpinR(
+      Math.floor(Math.random()*friend.length)
+    )
 
     
   }
   
-  const my = friend.slice(0,1)
+  const my = friend.slice(spinR-1,spinR)
 
 
 
