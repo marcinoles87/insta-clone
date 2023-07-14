@@ -3,20 +3,21 @@ import './myprofil.scss'
 
 function Myprofil({friend , images}) {
 
-  const [spinR , setSpinR] = useState(2)
+  const [spinUser , setSpinUser] = useState(2)
 
   const followers = (Math.random()*10000).toPrecision(7);
 
   const handeChangeProfil = () => {
 
-    setSpinR(
+    setSpinUser(
+      
       Math.floor(Math.random()*friend.length)
     )
 
     
   }
   
-  const my = friend.slice(spinR-1,spinR)
+  const my = friend.slice(spinUser-1,spinUser);
 
 
 

@@ -48,7 +48,7 @@ useEffect( () => {
 
       </Navigation>
 
-      <Header    friend={friend.filter( fr => fr.name.first.includes(searchFriend))} imagesprofil={imagesProfil}></Header>
+      <Header    friend={friend.filter( fr => fr.name.first.toUpperCase().includes(searchFriend))} imagesprofil={imagesProfil}></Header>
       <MyProfil friend={friend} images={imagesProfil}></MyProfil>
 
       

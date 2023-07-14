@@ -10,7 +10,7 @@ function Navigation({friend , setFriend , setSearch}) {
     
     e.preventDefault();
 
-    const inputValue = e.target.value;
+    const inputValue = e.target.value.toUpperCase();
     const newFriend = [...friend ]
     const findFriend = newFriend.filter( friend => friend.name.first.toUpperCase().includes(inputValue))
    
