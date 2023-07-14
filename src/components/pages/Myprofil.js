@@ -4,8 +4,17 @@ import './myprofil.scss'
 function Myprofil({friend , images}) {
 
   const followers = (Math.random()*10000).toPrecision(7);
+
+  const handeChangeProfil = () => {
+
+    const change = Math.random()
+
+    
+  }
   
   const my = friend.slice(0,1)
+
+
 
   return (
 <div>
@@ -14,7 +23,7 @@ function Myprofil({friend , images}) {
       <div key={index} className='myprofil-container'>
       
       <div className='myprofil-info'>
-        <img className='myprofil-photo' src={item.picture.large} alt='myprofil-face'></img>
+        <img className='myprofil-photo' src={item.picture.large} alt='myprofil-face' onClick={handeChangeProfil}></img>
           <div className='myprofil-text'>
         <p className='myprofil-name'>{item.name.first} {item.name.last}</p>
         <p className='myprofil-country'>{item.location.country} / {item.location.city}</p>
